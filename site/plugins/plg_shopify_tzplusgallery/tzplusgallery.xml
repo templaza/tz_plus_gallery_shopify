@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" method="upgrade" group="shopify">
+   <name>TZ Plus Gallery Shopify Plugin</name>
+   <author>TemPlaza</author>
+   <creationDate>May 2021</creationDate>
+   <version>1.0.0</version>
+   <url>https://www.shopifystyles.co</url>
+   <copyright>Copyright (C) 2021 TemPlaza, Jsc. All rights reserved.</copyright>
+   <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+   <authorEmail>info@templaza.com</authorEmail>
+   <authorUrl>https://www.templaza.com</authorUrl>
+   <description>Shopify Framework Plugin Description Here</description>>
+   <files>
+      <filename plugin="tzplusgallery">tzplusgallery.php</filename>
+   </files>
+</extension>

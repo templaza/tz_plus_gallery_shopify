@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Galleries" option="Default">
+        <message>
+            <![CDATA[Display galleries.]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic">
+        </fieldset>
+    </fields>
+</metadata>

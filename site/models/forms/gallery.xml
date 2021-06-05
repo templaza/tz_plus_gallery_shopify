@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_tz_plus_gallery/models/fields">
+		<field name="id" type="hidden" label="No Text" class="uk-input" id="id" size="10" default="0" readonly="true" />
+		<field name="shop_id" type="hidden" label="No Text" class="uk-input" id="id" size="10" default="0" readonly="true" />
+		<field name="title" type="text" label="JGLOBAL_TITLE" description="JFIELD_TITLE_DESC" id="title" class="uk-input uk-margin" size="30" required="true" />
+		<field name="data_type" type="hidden" label="Data Type" description="Type" id="data_type" class="uk-input" size="10" readonly="true" />
+		<field name="data_userid" type="text" label="User ID" description="User ID of Album" id="data_userid" class="uk-input uk-margin" size="30" required="true" />
+		<field name="album_type" type="list" label="Album Type" id="album_type" class="uk-select uk-margin" default="single_album">
+			<option value="single_album">Single Album</option>
+			<option value="multi_album">Multiple Album</option>
+			<option value="all_album">Show all Album</option>
+		</field>
+		<field name="album_id" type="text" label="Album ID" id="album_id" class="uk-input uk-margin" size="30" showon="album_type:single_album" />
+		<field name="album_include" type="text" label="Album Include" id="album_include" class="uk-input uk-margin" size="30" showon="album_type:multi_album" />
+		<field name="album_exclude" type="text" label="Album Exclude" id="album_exclude" class="uk-input uk-margin" size="30" showon="album_type:multi_album" />
+		<field name="data_api_key" type="text" label="Api Key" id="data_api_key" class="uk-input uk-margin" size="30" />
+		<field name="access_token" type="text" label="Access Token" id="access_token" class="uk-input uk-margin" size="30" />
+		<field name="data_limit" type="text" label="Album Limit" id="data_limit" class="uk-input uk-margin" size="30" showon="album_type!:single_album"/>
+		<field name="album_limit" type="text" label="Photo Limit" id="album_limit" class="uk-input uk-margin" size="30" />
+		<field name="description" type="editor" label="Description" buttons="true" class="uk-input uk-margin" filter="JComponentHelper::filterText"
+				asset_id="com_tz_plus_gallery" />
+		<field name="page_id" type="hidden" label="No Text" class="uk-input" id="page_id" size="10" default="0" readonly="true" />
+		<field type="color" name="options_color" default="" format="rgba" size="30" label="Color" />
+		<field name="options_padding" type="text" label="Album Padding" id="options_padding" class="uk-input uk-margin" size="30" />
+		<field name="options_columns" type="hidden" label="Column Options" id="options_columns" />
+		<field name="col_lg" type="list" label="Large Screen" id="col_lg" class="uk-select uk-margin" default="4">
+			<option value="1">1 Column</option>
+			<option value="2">2 Columns</option>
+			<option value="3">3 Columns</option>
+			<option value="4">4 Columns</option>
+			<option value="5">5 Columns</option>
+			<option value="6">6 Columns</option>
+		</field>
+		<field name="col_md" type="list" label="Medium Screen" id="col_md" class="uk-select uk-margin" default="4">
+			<option value="1">1 Column</option>
+			<option value="2">2 Columns</option>
+			<option value="3">3 Columns</option>
+			<option value="4">4 Columns</option>
+			<option value="5">5 Columns</option>
+			<option value="6">6 Columns</option>
+		</field>
+		<field name="col_sm" type="list" label="Small Screen" id="col_sm" class="uk-select uk-margin" default="3">
+			<option value="1">1 Column</option>
+			<option value="2">2 Columns</option>
+			<option value="3">3 Columns</option>
+			<option value="4">4 Columns</option>
+			<option value="5">5 Columns</option>
+			<option value="6">6 Columns</option>
+		</field>
+		<field name="col_xs" type="list" label="Mobile Screen" id="col_xs" class="uk-select uk-margin" default="2">
+			<option value="1">1 Column</option>
+			<option value="2">2 Columns</option>
+			<option value="3">3 Columns</option>
+			<option value="4">4 Columns</option>
+			<option value="5">5 Columns</option>
+			<option value="6">6 Columns</option>
+		</field>
+		<field name="custom_css" type="textarea" class="uk-textarea" id="custom_css" default="" label="Custom CSS" description="" rows="5" filter="raw"/>
+	</fieldset>
+</form>

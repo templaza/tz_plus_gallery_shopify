@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `#__tz_plus_galleries` (
+    `id` bigint(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `shop_id` bigint(20) UNSIGNED NOT NULL,
+    `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `data_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `data_userid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `album_type` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `album_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `album_include` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `album_exclude` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `data_api_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `access_token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `data_limit` int(11) NOT NULL DEFAULT '0',
+    `album_limit` int(11) NOT NULL DEFAULT '0',
+    `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `options` text COLLATE utf8mb4_unicode_ci NOT NULL,
+    `page_id` bigint(20) UNSIGNED NOT NULL,
+    `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+    `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
