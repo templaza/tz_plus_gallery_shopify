@@ -30,6 +30,8 @@ class TZ_Plus_GalleryRouter extends JComponentRouterView
         $this->registerView($galleries);
         $gallery = new JComponentRouterViewconfiguration('gallery');
         $this->registerView($gallery);
+        $shop = new JComponentRouterViewconfiguration('shop');
+        $this->registerView($shop);
 
         parent::__construct($app, $menu);
 

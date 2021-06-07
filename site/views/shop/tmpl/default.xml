@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Install App" option="Default">
+        <message>
+            <![CDATA[Install your app]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic">
+        </fieldset>
+    </fields>
+</metadata>

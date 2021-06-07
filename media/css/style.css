@@ -388,7 +388,8 @@
   clear: both;
   display: none; }
   #pgthumbview #pgthumbs .pgthumb img {
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
 
 #pgthumbcrumbs {
   margin-bottom: 0.5em; }

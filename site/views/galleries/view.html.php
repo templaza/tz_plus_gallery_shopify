@@ -30,8 +30,6 @@ class TZ_Plus_GalleryViewGalleries extends JViewLegacy{
     public function display($tpl = null){
     	$doc    =   JFactory::getDocument();
 	    JHtml::_('jquery.framework');
-	    $doc->addStyleSheet('components/com_tz_plus_gallery/css/style.css');
-	    $doc->addScript('components/com_tz_plus_gallery/js/main.js');
 	    $this->data         =   $this->get('Data');
 	    $this->action       =   $this->get('CurrentURL');
 	    $this->state        =   $this->get('State');

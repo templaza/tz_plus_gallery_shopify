@@ -36,8 +36,14 @@ $params =   $this->state->get('params');
                 <fieldset class="uk-fieldset">
                     <?php echo $this->form->renderField('title'); ?>
                     <?php echo $this->form->renderField('data_userid'); ?>
-                    <?php if ($this->item->data_type == 'flickr') echo $this->form->renderField('data_api_key'); ?>
-                    <?php if ($this->item->data_type == 'instagram' || $this->item->data_type == 'facebook') echo $this->form->renderField('access_token'); ?>
+                    <?php if ($this->item->data_type == 'flickr') {
+                        echo $this->form->renderField('data_api_key');
+                        echo '<div class="uk-margin-bottom"><small>Please insert Your Flickr API Key <a href="https://www.flickr.com/services/api/misc.api_keys.html" target="_blank">Get Flickr API Key </a></small></div>';
+                    }?>
+                    <?php if ($this->item->data_type == 'instagram' || $this->item->data_type == 'facebook') {
+                        echo $this->form->renderField('access_token');
+                        echo '<div class="uk-margin-bottom"><small>How to get Access Token? <a href="https://shopifystyles.com/blog/instagram-album" target="_blank">Check our document</a></small></div>';
+                    } ?>
                     <?php
                     if ($this->item->data_type != 'instagram') {
                         echo $this->form->renderField('album_type');
