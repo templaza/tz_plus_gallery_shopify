@@ -254,8 +254,8 @@ if (!$.isFunction($.fn.plusGallery)) {
                     dataAttr = lmnt.attr('data-limit');
                     if(dataAttr) {
                         pg.limit = dataAttr;
-                        if(pg.limit==0){
-                            pg.limit=100000;
+                        if(parseInt(pg.limit) === 0){
+                            pg.limit = 100000;
                         }
                     }
 
@@ -263,7 +263,9 @@ if (!$.isFunction($.fn.plusGallery)) {
                     dataAttr = lmnt.attr('data-album-limit');
                     if(dataAttr) {
                         pg.albumLimit = dataAttr;
-
+                        if (parseInt(pg.albumLimit) === 0) {
+                            pg.albumLimit = 100000;
+                        }
                     }
 
                     //album id to exclude
@@ -492,7 +494,6 @@ if (!$.isFunction($.fn.plusGallery)) {
                             }
                             break;
                         case 'facebook':
-
                             objPath = json.data;
                             albumTotal = objPath.length;
                             if(albumTotal > pg.albumLimit && pg.albumLimit!=0) {
@@ -508,7 +509,6 @@ if (!$.isFunction($.fn.plusGallery)) {
                                         galleryTitle = obj.name;
                                         galleryJSON = 'https://graph.facebook.com/v10.0/' + obj.id + '/photos?limit=' + pg.limit + '&access_token=' + pg.accessToken +'&fields=images,name,link';
                                         galleryImage = 'http://graph.facebook.com/v10.0/' + obj.id + '/picture?type=album&access_token=' + pg.accessToken +'';
-                                        //console.log(galleryImage);
                                         pg.loadAlbums(galleryTitle,galleryImage,galleryJSON);
                                     }
 
@@ -603,7 +603,6 @@ if (!$.isFunction($.fn.plusGallery)) {
                             }
                         });
                     }
-
 
                     //include only specified albums if pg.include is set
                     if(pg.include !== null) {
