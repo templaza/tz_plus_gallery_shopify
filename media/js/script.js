@@ -24,7 +24,7 @@ if (typeof jQuery == 'undefined') {
     var tzAlert = document.createElement("div");
     var tzText = document.createTextNode("This app require jQuery. Your theme should support jQuery library");
     tzAlert.appendChild(tzText);
-    document.getElementsByClassName("plusgallery").appendChild(tzAlert);
+    document.getElementsByClassName("plusgallery")[0].appendChild(tzAlert);
 }
 if (!$.isFunction($.fn.plusGallery)) {
     $.ajaxSetup({ cache: false });
